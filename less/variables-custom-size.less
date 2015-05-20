@@ -1,0 +1,226 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Typography
+//
+@font-size-base:                (14rem/10);
+@font-size-large:               ((@font-size-base * 1.25)); 
+@font-size-small:               ((@font-size-base * 0.85)); 
+@font-size-h1:                  ((@font-size-base * 2.6)); 
+@font-size-h2:                  ((@font-size-base * 2.15));
+@font-size-h3:                  ((@font-size-base * 1.7)); 
+@font-size-h4:                  ((@font-size-base * 1.25));
+@font-size-h5:                  ((@font-size-base * 1));
+@font-size-h6:                  ((@font-size-base * 0.85));
+@line-height-base:              (20/14); // Unit-less `line-height` for use in components like buttons. 
+@line-height-computed:          ((@font-size-base * @line-height-base)); // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@headings-line-height:          1.1;
+
+
+//== Components
+//
+@padding-base-vertical:         (6rem/10);
+@padding-base-horizontal:       (12rem/10);
+
+@padding-large-vertical:        (10rem/10);
+@padding-large-horizontal:      (16rem/10);
+
+@padding-small-vertical:        (5rem/10);
+@padding-small-horizontal:      (10rem/10);
+
+@padding-xs-vertical:           (1rem/10);
+@padding-xs-horizontal:         (5rem/10);
+
+@line-height-large:             1.3333333; // extra decimals for Win 8.1 Chrome
+@line-height-small:             1.5;
+
+@border-radius-base:            4px;
+@border-radius-large:           6px;
+@border-radius-small:           3px;
+
+@caret-width-base:              (4rem/10); // width of the `border` for generating carets that indicator dropdowns.
+@caret-width-large:             (5rem/10); // carets increase slightly in size for larger components.
+
+
+//== Tables
+//
+@table-cell-padding:            (8rem/10);
+@table-condensed-cell-padding:  (5rem/10);
+
+
+//== Forms
+//
+@input-border-radius:           @border-radius-base;
+@input-border-radius-large:     @border-radius-large;
+@input-border-radius-small:     @border-radius-small;
+
+@input-height-base:             (@line-height-computed + (@padding-base-vertical * 2) + 2/10);
+@input-height-large:            ((@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2/10);
+@input-height-small:            ((@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2/10);
+@form-group-margin-bottom:      (15rem/10);
+
+
+//== Media queries breakpoints
+//
+// Extra small screen / phone
+@screen-xs:                     480px;         //** Deprecated as of v3.0.1 ** 
+@screen-xs-min:                 @screen-xs;    //** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-phone:                  @screen-xs-min;//** Deprecated `@screen-phone` as of v3.0.1
+
+// Small screen / tablet
+@screen-sm:                     768px;         //** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm-min:                 @screen-sm;
+@screen-tablet:                 @screen-sm-min;//** Deprecated `@screen-tablet` as of v3.0.1
+
+// Medium screen / desktop
+@screen-md:                     992px;         //** Deprecated `@screen-md` as of v3.0.1
+@screen-md-min:                 @screen-md;
+@screen-desktop:                @screen-md-min;//** Deprecated `@screen-desktop` as of v3.0.1
+
+// Large screen / wide desktop
+@screen-lg:                     1200px;        //** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg-min:                 @screen-lg;
+@screen-lg-desktop:             @screen-lg-min;//** Deprecated `@screen-lg-desktop` as of v3.0.1
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                 (@screen-sm-min - 1);
+@screen-sm-max:                 (@screen-md-min - 1);
+@screen-md-max:                 (@screen-lg-min - 1);
+
+
+//== Grid system
+//
+@grid-columns:                  12;
+@grid-gutter-width:             30px;
+@grid-float-breakpoint:         @screen-sm-min;
+@grid-float-breakpoint-max:     (@grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+// Small screen / tablet
+@container-tablet:              (720px + @grid-gutter-width);
+@container-sm:                  @container-tablet; //** For `@screen-sm-min` and up.
+
+// Medium screen / desktop
+@container-desktop:             (940px + @grid-gutter-width); //** For `@screen-md-min` and up.
+@container-md:                  @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:       (1140px + @grid-gutter-width);
+@container-lg:                  @container-large-desktop; //** For `@screen-lg-min` and up.
+
+
+//== Navbar
+//
+@navbar-height:                 (50rem/10);
+@navbar-margin-bottom:          @line-height-computed;
+@navbar-border-radius:          @border-radius-base;
+@navbar-padding-horizontal:     ((@grid-gutter-width / 2));
+@navbar-padding-vertical:       ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height:    340px;
+
+
+//== Navs
+//
+@nav-link-padding:              (10rem/10) (15rem/10);
+
+//== Pills
+@nav-pills-border-radius:       @border-radius-base;
+
+
+//== Pager
+//
+@pager-border-radius:           15px;
+
+
+//== Jumbotron
+//
+@jumbotron-padding:             (30rem/10);
+@jumbotron-font-size:           ((@font-size-base * 1.5));
+
+
+//== Tooltips
+//
+@tooltip-max-width:             200px;
+@tooltip-arrow-width:           (5rem/10);
+
+
+//== Popovers
+//
+@popover-max-width:             276px;
+@popover-arrow-width:           (10rem/10);
+@popover-arrow-outer-width:     (@popover-arrow-width + 1/10);
+
+
+//== Modals
+//
+@modal-inner-padding:           (15rem/10);
+@modal-title-padding:           (15rem/10);
+@modal-title-line-height:       @line-height-base;
+@modal-lg:                      900px;
+@modal-md:                      600px;
+@modal-sm:                      300px;
+
+
+//== Alerts
+//
+@alert-padding:                 (15rem/10);
+@alert-border-radius:           @border-radius-base;
+
+
+//== Progress bars
+//
+@progress-border-radius:        @border-radius-base;
+
+
+//== List group
+//
+@list-group-border-radius:      @border-radius-base;
+
+
+//== Panels
+//
+@panel-body-padding:            (15rem/10);
+@panel-heading-padding:         (10rem/10) (15rem/10);
+@panel-footer-padding:          @panel-heading-padding;
+@panel-border-radius:           @border-radius-base;
+
+
+//== Thumbnails
+//
+@thumbnail-padding:             (4rem/10);
+@thumbnail-border-radius:       @border-radius-base;
+@thumbnail-caption-padding:     (9rem/10);
+
+
+//== Badges
+//
+@badge-line-height:             1;
+@badge-border-radius:           10px;
+
+
+//== Breadcrumbs
+//
+@breadcrumb-padding-vertical:   (8rem/10);
+@breadcrumb-padding-horizontal: (15rem/10);
+
+
+//== Carousel
+//
+@carousel-control-width:        15%;
+@carousel-control-font-size:    (20rem/10);
+
+
+//== Code
+//
+@pre-scrollable-max-height:     340px;
+
+
+//== Type
+//
+@component-offset-horizontal:   180px;
+@blockquote-font-size:          (@font-size-base * 1.25);
+
+
