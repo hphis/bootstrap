@@ -1,4 +1,5 @@
-// Import file name variables for customization
+//
+// File name variables for import files
 //
 @bootstrap-before-less:     "bootstrap-before.less";
 @bootstrap-after-less:      "bootstrap-after.less";
@@ -42,10 +43,16 @@
 @utilities-less:            "utilities.less";
 @responsive-utilities-less: "responsive-utilities.less";
 
-// Before
+
+//
+// Optional Before Import
+//
 @import (optional) "@{bootstrap-before-less}";
 
+
+//
 // Imports
+//
 
 // Core variables and mixins
 @import "@{variables-less}";
@@ -98,6 +105,8 @@
 @import "@{utilities-less}";
 @import "@{responsive-utilities-less}";
 
-// After
+//
+// Optional After Import
+//
 @import (optional) "@{bootstrap-after-less}";
 

@@ -29,9 +29,8 @@ module.exports = function (grunt) {
   var generateRawFiles = require('./grunt/bs-raw-files-generator.js');
   var generateCommonJSModule = require('./grunt/bs-commonjs-generator.js');
   var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' });
-  
+
   var lessModifyVars = {
-    'variables-less': '"variables-custom.less"'		  
   };
 
   Object.keys(configBridge.paths).forEach(function (key) {
