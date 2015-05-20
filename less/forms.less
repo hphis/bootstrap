@@ -83,7 +83,7 @@ input[type="checkbox"]:focus {
 // Adjust output element
 output {
   display: block;
-  padding-top: (@padding-base-vertical + 1);
+  padding-top: (@padding-base-vertical + 1/10);
   font-size: @font-size-base;
   line-height: @line-height-base;
   color: @input-color;
@@ -115,7 +115,10 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+// 
+// Note: commented out 'height' in order to work with "rem" based sizing:
+//  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
   line-height: @line-height-base;
@@ -295,8 +298,8 @@ input[type="checkbox"] {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: (@padding-base-vertical + 1);
-  padding-bottom: (@padding-base-vertical + 1);
+  padding-top: (@padding-base-vertical + 1/10);
+  padding-bottom: (@padding-base-vertical + 1/10);
   // Remove default margin from `p`
   margin-bottom: 0;
   min-height: (@line-height-computed + @font-size-base);
@@ -402,7 +405,7 @@ input[type="checkbox"] {
 .has-feedback label {
 
   & ~ .form-control-feedback {
-     top: (@line-height-computed + 5); // Height of the `label` and its margin
+     top: (@line-height-computed + 5/10); // Height of the `label` and its margin
   }
   &.sr-only ~ .form-control-feedback {
      top: 0;
@@ -521,13 +524,13 @@ input[type="checkbox"] {
   .checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+    padding-top: (@padding-base-vertical + 1/10); // Default padding plus a border
   }
   // Account for padding we're adding to ensure the alignment and of help text
   // and other content below items
   .radio,
   .checkbox {
-    min-height: (@line-height-computed + (@padding-base-vertical + 1));
+    min-height: (@line-height-computed + (@padding-base-vertical + 1/10));
   }
 
   // Make form groups behave like rows
@@ -541,7 +544,7 @@ input[type="checkbox"] {
     .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+      padding-top: (@padding-base-vertical + 1/10); // Default padding plus a border
     }
   }
 
@@ -560,14 +563,14 @@ input[type="checkbox"] {
   .form-group-lg {
     @media (min-width: @screen-sm-min) {
       .control-label {
-        padding-top: ((@padding-large-vertical * @line-height-large) + 1);
+        padding-top: ((@padding-large-vertical * @line-height-large) + 1/10);
       }
     }
   }
   .form-group-sm {
     @media (min-width: @screen-sm-min) {
       .control-label {
-        padding-top: (@padding-small-vertical + 1);
+        padding-top: (@padding-small-vertical + 1/10);
       }
     }
   }

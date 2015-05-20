@@ -1,53 +1,103 @@
-// Core variables and mixins
-@variables-less: "variables.less";
-@mixins-less: "mixins.less";
+// Import file name variables for customization
+//
+@bootstrap-before-less:     "bootstrap-before.less";
+@bootstrap-after-less:      "bootstrap-after.less";
+@variables-less:            "variables.less";
+@mixins-less:               "mixins.less";
+@normalize-less:            "normalize.less";
+@print-less:                "print.less";
+@glyphicons-less:           "glyphicons.less";
+@scaffolding-less:          "scaffolding.less";
+@type-less:                 "type.less";
+@code-less:                 "code.less";
+@grid-less:                 "grid.less";
+@tables-less:               "tables.less";
+@forms-less:                "forms.less";
+@buttons-less:              "buttons.less";
+@component-animations-less: "component-animations.less";
+@dropdowns-less:            "dropdowns.less";
+@button-groups-less:        "button-groups.less";
+@input-groups-less:         "input-groups.less";
+@navs-less:                 "navs.less";
+@navbar-less:               "navbar.less";
+@breadcrumbs-less:          "breadcrumbs.less";
+@pagination-less:           "pagination.less";
+@pager-less:                "pager.less";
+@labels-less:               "labels.less";
+@badges-less:               "badges.less";
+@jumbotron-less:            "jumbotron.less";
+@thumbnails-less:           "thumbnails.less";
+@alerts-less:               "alerts.less";
+@progress-bars-less:        "progress-bars.less";
+@media-less:                "media.less";
+@list-group-less:           "list-group.less";
+@panels-less:               "panels.less";
+@responsive-embed-less:     "responsive-embed.less";
+@wells-less:                "wells.less";
+@close-less:                "close.less";
+@modals-less:               "modals.less";
+@tooltip-less:              "tooltip.less";
+@popovers-less:             "popovers.less";
+@carousel-less:             "carousel.less";
+@utilities-less:            "utilities.less";
+@responsive-utilities-less: "responsive-utilities.less";
 
+// Before
+@import (optional) "@{bootstrap-before-less}";
+
+// Imports
+
+// Core variables and mixins
 @import "@{variables-less}";
 @import "@{mixins-less}";
 
 // Reset and dependencies
-@import "normalize.less";
-@import "print.less";
-@import "glyphicons.less";
+@import "@{normalize-less}";
+@import "@{print-less}";
+@import "@{glyphicons-less}";
 
 // Core CSS
-@import "scaffolding.less";
-@import "type.less";
-@import "code.less";
-@import "grid.less";
-@import "tables.less";
-@import "forms.less";
-@import "buttons.less";
+@import "@{scaffolding-less}";
+@import "@{type-less}";
+@import "@{code-less}";
+@import "@{grid-less}";
+@import "@{tables-less}";
+@import "@{forms-less}";
+@import "@{buttons-less}";
 
 // Components
-@import "component-animations.less";
-@import "dropdowns.less";
-@import "button-groups.less";
-@import "input-groups.less";
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
-@import "labels.less";
-@import "badges.less";
-@import "jumbotron.less";
-@import "thumbnails.less";
-@import "alerts.less";
-@import "progress-bars.less";
-@import "media.less";
-@import "list-group.less";
-@import "panels.less";
-@import "responsive-embed.less";
-@import "wells.less";
-@import "close.less";
+@import "@{component-animations-less}";
+@import "@{dropdowns-less}";
+@import "@{button-groups-less}";
+@import "@{input-groups-less}";
+@import "@{navs-less}";
+@import "@{navbar-less}";
+@import "@{breadcrumbs-less}";
+@import "@{pagination-less}";
+@import "@{pager-less}";
+@import "@{labels-less}";
+@import "@{badges-less}";
+@import "@{jumbotron-less}";
+@import "@{thumbnails-less}";
+@import "@{alerts-less}";
+@import "@{progress-bars-less}";
+@import "@{media-less}";
+@import "@{list-group-less}";
+@import "@{panels-less}";
+@import "@{responsive-embed-less}";
+@import "@{wells-less}";
+@import "@{close-less}";
 
 // Components w/ JavaScript
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";
+@import "@{modals-less}";
+@import "@{tooltip-less}";
+@import "@{popovers-less}";
+@import "@{carousel-less}";
 
 // Utility classes
-@import "utilities.less";
-@import "responsive-utilities.less";
+@import "@{utilities-less}";
+@import "@{responsive-utilities-less}";
+
+// After
+@import (optional) "@{bootstrap-after-less}";
+
